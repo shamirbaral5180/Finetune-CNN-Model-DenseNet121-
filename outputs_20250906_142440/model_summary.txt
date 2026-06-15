@@ -1,0 +1,27 @@
+Model: "densenet121_lldd"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 256, 256, 3)]     0         
+                                                                 
+ rescaling (Rescaling)       (None, 256, 256, 3)       0         
+                                                                 
+ sequential (Sequential)     (None, 256, 256, 3)       0         
+                                                                 
+ densenet121 (Functional)    (None, 8, 8, 1024)        7037504   
+                                                                 
+ global_average_pooling2d (  (None, 1024)              0         
+ GlobalAveragePooling2D)                                         
+                                                                 
+ batch_normalization (Batch  (None, 1024)              4096      
+ Normalization)                                                  
+                                                                 
+ dropout (Dropout)           (None, 1024)              0         
+                                                                 
+ dense (Dense)               (None, 9)                 9225      
+                                                                 
+=================================================================
+Total params: 7050825 (26.90 MB)
+Trainable params: 11273 (44.04 KB)
+Non-trainable params: 7039552 (26.85 MB)
+_________________________________________________________________
